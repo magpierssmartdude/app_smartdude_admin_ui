@@ -1,0 +1,58 @@
+<div class="col-md-12 row">
+
+  <div class="col-md-12">
+    <div class="btnContainer"><button class="btn btn-primary"> Add Vendor Details</button></div>
+    <p-panel header="Vendor Details">
+      <!-- <button class="btn btn-danger" (click)="addUser()"> Add User</button> -->
+
+      <p-table [value]="verdors">
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="hidden">Vendor Id</th>
+            <th>Vendor Name</th>
+            <th style="width:220px;">Vendor Address</th>
+            <th style="width:220px;">Service Type</th>
+            <th>Vendor Type</th>
+            <th>Actions</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-vendor>
+          <tr>
+            <td class="hidden">{{vendor.vendorId}}</td>
+            <td>{{vendor.name}}</td>
+            <td>{{vendor.address}}</td>
+            <td>{{vendor.serviceType}}</td>
+            <td>{{vendor.vendorType}}</td>
+            <td class="actions"><span class="fa fa-fw fa-edit"></span>
+              <span class="fa fa-fw fa-remove"></span>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <!-- <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="hidden">Vendor Id</th>
+            <th>Vendor Name</th>
+            <th>Vendor Address</th>
+            <th>Service Type</th>
+            <th>Vendor Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vendor of verdors">
+            <td class="hidden">{{vendor.vendorId}}</td>
+            <td>{{vendor.name}}</td>
+            <td>{{vendor.address}}</td>
+            <td>{{vendor.serviceType}}</td>
+            <td>{{vendor.vendorType}}</td>
+            <td><button class="btn btn-danger" (click)="deleteUser(vendor)"> Delete</button>
+              <button class="btn btn-danger" (click)="editUser(vendor)" style="margin-left: 20px;"> Edit</button></td>
+          </tr>
+        </tbody>
+      </table> -->
+    </p-panel>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.form-group input {
+    width: 350px;
+    padding-left: 10px;
+}
+
+.formContainer {
+    margin-top: 2rem;
+}
+
+.form-group {
+    padding: 5px;
+   
+}
+
+.btnContainer {
+    text-align: right;
+    padding: 10px;
+}
+
+.btnContainer button{
+    margin: 10px;
+}

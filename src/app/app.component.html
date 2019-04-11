@@ -1,0 +1,26 @@
+<div class="headerContainer col-md-12 row">
+    <div class="col-md-11">
+        <span><img src="../assets/logo_smart.png" width="30" /></span>
+        <h4>SMART DUDE</h4>
+    </div>
+    <div class="col-md-1 logout">
+        <span class="fa fa-fw fa-paper-plane"></span>
+        <span (click)="logout()">Logout</span>
+    </div>
+</div>
+<div class="mainContainer">
+    <p-sidebar [(visible)]="display" styleClass="sidebarContainer">
+        <div class="col-md-12 noPadding menuContainer">
+            <p-megaMenu [model]="items" [orientation]="vertical"></p-megaMenu>
+        </div>
+    </p-sidebar>
+
+    <div class="col-md-12 row noPadding">
+        <div class="col-md-1">
+            <button type="text" (click)="display = true" class="menuBtn" pButton icon="fa fa-list"></button>
+        </div>
+        <div class="col-md-11">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div>

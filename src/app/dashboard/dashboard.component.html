@@ -1,0 +1,26 @@
+<div>
+  <h5>Dashboard</h5>
+  <div class="col-md-12 row">
+    <div class="col-md-6 space">
+      <p-panel header="Orders Placed">
+        <p-chart type="line" [data]="data"></p-chart>
+      </p-panel>
+    </div>
+    <div class="col-md-6 space">
+      <p-panel header="Vendors Per Month">
+        <p-chart type="bar" [data]="barData"></p-chart>
+      </p-panel>
+    </div>
+    <div class="space"></div>
+    <div class="col-md-6">
+      <p-panel header="Order Processed Metrics">
+        <p-chart type="doughnut" [data]="pieData"></p-chart>
+      </p-panel>
+    </div>
+    <div class="col-md-6">
+      <p-panel header="Order Metrics">
+        <p-chart type="pie" [data]="pieData"></p-chart>
+      </p-panel>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="col-md-12">
+  <p-panel header="Add Service">
+    <div class="col-md-12 formContainer">
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-group" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Queue Name" class="ui-button-warn">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-user" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Service Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-dollar" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Price">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-balance-scale" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Unit of Measurement code">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-life-saver" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Number of services">
+          </div>
+        </div>
+
+        <div class="btnContainer">
+          <button class="btn btn-danger">Save</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </p-panel>
+</div>

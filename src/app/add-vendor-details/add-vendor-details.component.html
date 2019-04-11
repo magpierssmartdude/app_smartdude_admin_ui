@@ -1,0 +1,47 @@
+<div class="col-md-12">
+  <p-panel header="Vendor SignUp">
+    <div class="col-md-12 formContainer">
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-user" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="User Name" class="ui-button-warn">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-building" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Org Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-building-o" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Org Type">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-circle" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Password">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa fa-circle-o" class="ui-button-danger"></button>
+            <input type="text" pInputText placeholder="Confirm Password">
+          </div>
+        </div>
+
+        <div class="btnContainer">
+          <button class="btn btn-danger">Save</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </p-panel>
+</div>

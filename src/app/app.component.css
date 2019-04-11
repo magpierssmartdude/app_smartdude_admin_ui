@@ -1,0 +1,58 @@
+.headerContainer {
+    min-height: 60px;
+    background: #dc3545!important;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 20px;
+    z-index: 9999;
+    position: fixed;
+}
+
+.mainContainer  {
+    padding-top: 100px;
+}
+
+.headerContainer span{
+    float: left;
+    margin-top: 10px;
+}
+
+.headerContainer h4{
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+}
+.noPadding {
+    padding: 0;
+}
+
+.menuBtn {
+    background-color: #e91224 !important;
+    border: 1px solid #e91224 !important;
+    margin-left: 15px;
+}
+h4 {
+    color: #ffffff;
+}
+
+/deep/ body .ui-megamenu {
+    border: 1px solid #dddddd !important;
+    margin-top: 80px; 
+    background-color: #eeeeee; 
+ 
+}
+
+/deep/ body .ui-megamenu > .ui-menuitem-text {
+    font-size: 14px;
+}
+
+/deep/ body .ui-sidebar {
+    background-color: #f4f4f4; 
+}
+
+.logout {
+    text-align: right;
+    color: #ffffff;
+    margin-top:10px;
+    cursor: pointer;
+}
+
