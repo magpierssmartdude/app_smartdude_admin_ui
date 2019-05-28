@@ -1,6 +1,6 @@
 .headerContainer {
     min-height: 60px;
-    background: #dc3545!important;
+    background: #ffffff!important;
     border: 1px solid #c8c8c8;
     margin-bottom: 20px;
     z-index: 9999;
@@ -17,7 +17,7 @@
 }
 
 .headerContainer h4{
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 15px;
     float: left;
 }
@@ -25,34 +25,70 @@
     padding: 0;
 }
 
+.mTop {
+    margin-top: 12px
+}
+
 .menuBtn {
-    background-color: #e91224 !important;
-    border: 1px solid #e91224 !important;
+    background-color: #a0a0a0 !important;
+    border: 1px solid #a0a0a0 !important;
     margin-left: 15px;
 }
 h4 {
+    color: #151b1e;
+    font-size: 1rem;
+}
+
+.login-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50em;
+}
+
+/deep/ .ui-sidebar {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/deep/ body .ui-megamenu {
+    border: 1px solid #444d58 !important;
+    margin-top: 80px; 
+    background-color: #444d58; 
     color: #ffffff;
 }
 
-/deep/ body .ui-megamenu {
-    border: 1px solid #dddddd !important;
-    margin-top: 80px; 
-    background-color: #eeeeee; 
- 
+/deep/ body .ui-megamenu  .ui-menuitem-text {
+    font-size: 0.875em;
+    color: #ffffff !important;
 }
 
-/deep/ body .ui-megamenu > .ui-menuitem-text {
-    font-size: 14px;
+/deep/ body .ui-megamenu .ui-menuitem .ui-menuitem-active > ui-menuitem-link {
+    color: #151b1e;
+    background-color: #444d58; 
+}
+
+/deep/ body .ui-megamenu  .ui-menuitem-icon {
+    font-size: 0.875em;
+    color: #ffffff !important;
 }
 
 /deep/ body .ui-sidebar {
-    background-color: #f4f4f4; 
+    background-color: #444d58; 
 }
 
 .logout {
     text-align: right;
-    color: #ffffff;
-    margin-top:10px;
+    color: #151b1e;
+    margin-top:5px;
     cursor: pointer;
+}
+
+/deep/ .sidebar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    color: #fff;
+    background: #444d58;
 }
 

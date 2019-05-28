@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { MenuItem } from "./model/menu.model";
+import { MenuItem } from 'primeng/api';
+import { MainMenuItem } from "./model/menu.model";
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,19 @@ import { MenuItem } from "./model/menu.model";
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  display = true;
+  showMenu = true;
+  menuItems: MainMenuItem[];
   items: MenuItem[];
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.items = [
+      { label: 'New', icon: 'pi pi-fw pi-plus' },
+      { label: 'Open', icon: 'pi pi-fw pi-download' },
+      { label: 'Undo', icon: 'pi pi-fw pi-refresh' }
+    ];
+    this.menuItems = [
       {
         label: 'Dashboard', icon: 'fa fa-fw fa-dashboard', routerLink: ['/dashboard']
       },
@@ -30,6 +39,14 @@ export class AppComponent implements OnInit {
         label: 'Create Admin', icon: 'fa fa-fw fa-user', routerLink: ['/create-admin']
       }
     ];
+  }
+
+  toggleMenu(event) {
+    this.display = !this.display;
+  }
+
+  menuToggle(event) {
+    this.showMenu = !this.showMenu;
   }
 
   logout() {

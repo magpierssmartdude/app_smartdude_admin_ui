@@ -17,6 +17,8 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ChartModule } from 'primeng/chart';
 import { AddServiceComponent } from './add-service/add-service.component';
 import { CreateQueueComponent } from './create-queues/create-queue.component';
+import { MenuModule } from 'primeng/menu';
+
 import { ListUserComponent } from "./list-user/list-user.component";
 import { VendorListComponent } from "./vendor-list/vendor-list.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
@@ -47,6 +49,7 @@ import { OrderService } from "./service/order.service";
     ChartModule,
     PanelModule,
     MegaMenuModule,
+    MenuModule,
     RadioButtonModule,
     TableModule,
     FileUploadModule,

@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #151b1e;
+    text-align: left;
+    background-color: #eff3f8;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f1f3f8;
+    border-bottom: 1px solid #e3e8ec;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+input {
+    border-color: #a0a0a0;
+    border-width: 1px;    
+    border-color: initial;
+    border-image: initial;
+    border-style: ridge;
+    color: #151b1e
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem !important;
+    line-height: 1.5;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
