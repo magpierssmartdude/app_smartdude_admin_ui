@@ -27,6 +27,10 @@ import { AddVendorDetailsComponent } from "./add-vendor-details/add-vendor-detai
 import { UserService } from "./service/user.service";
 import { AddService } from "./service/add-service.service";
 import { OrderService } from "./service/order.service";
+import { SignupComponent } from './signup/signup.component';
+import { MessageService } from 'primeng/components/common/messageservice';
+import {ToastModule} from 'primeng/toast';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,9 @@ import { OrderService } from "./service/order.service";
     VendorListComponent,
     DashboardComponent,
     AddVendorDetailsComponent,
-    CreateAdminComponent
+    CreateAdminComponent,
+    SignupComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -54,9 +60,11 @@ import { OrderService } from "./service/order.service";
     TableModule,
     FileUploadModule,
     HttpClientModule,
-    DropdownModule
+    DropdownModule,
+    ToastModule
+
   ],
-  providers: [AuthenticationService, UserService, OrderService, AddService],
+  providers: [AuthenticationService, UserService, OrderService, AddService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

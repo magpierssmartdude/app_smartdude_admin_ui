@@ -7,20 +7,22 @@
     position: fixed;
 }
 
-.mainContainer  {
+.mainContainer {
     padding-top: 100px;
+    background: #ffffff!important;
 }
 
-.headerContainer span{
+.headerContainer span {
     float: left;
     margin-top: 10px;
 }
 
-.headerContainer h4{
+.headerContainer h4 {
     margin-top: 20px;
     margin-left: 15px;
     float: left;
 }
+
 .noPadding {
     padding: 0;
 }
@@ -34,6 +36,7 @@
     border: 1px solid #a0a0a0 !important;
     margin-left: 15px;
 }
+
 h4 {
     color: #151b1e;
     font-size: 1rem;
@@ -49,36 +52,37 @@ h4 {
     padding: 0 !important;
     margin: 0 !important;
 }
+
 /deep/ body .ui-megamenu {
     border: 1px solid #444d58 !important;
-    margin-top: 80px; 
-    background-color: #444d58; 
+    margin-top: 80px;
+    background-color: #444d58;
     color: #ffffff;
 }
 
-/deep/ body .ui-megamenu  .ui-menuitem-text {
+/deep/ body .ui-megamenu .ui-menuitem-text {
     font-size: 0.875em;
     color: #ffffff !important;
 }
 
-/deep/ body .ui-megamenu .ui-menuitem .ui-menuitem-active > ui-menuitem-link {
+/deep/ body .ui-megamenu .ui-menuitem .ui-menuitem-active>ui-menuitem-link {
     color: #151b1e;
-    background-color: #444d58; 
+    background-color: #444d58;
 }
 
-/deep/ body .ui-megamenu  .ui-menuitem-icon {
+/deep/ body .ui-megamenu .ui-menuitem-icon {
     font-size: 0.875em;
     color: #ffffff !important;
 }
 
 /deep/ body .ui-sidebar {
-    background-color: #444d58; 
+    background-color: #444d58;
 }
 
 .logout {
     text-align: right;
     color: #151b1e;
-    margin-top:5px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
@@ -91,4 +95,3 @@ h4 {
     color: #fff;
     background: #444d58;
 }
-

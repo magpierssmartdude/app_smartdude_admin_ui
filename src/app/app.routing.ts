@@ -8,6 +8,7 @@ import { CreateAdminComponent } from "./create-admin/create-admin.component";
 import { VendorListComponent } from "./vendor-list/vendor-list.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AddVendorDetailsComponent } from "./add-vendor-details/add-vendor-details.component";
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginModule' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'create-queue', component: CreateQueueComponent },
   { path: 'vendor-list', component: VendorListComponent },
   { path: 'add-vendor-details', component: AddVendorDetailsComponent },
+  { path: 'signup', component: SignupComponent },
   { path: '', component: LoginComponent },
   {
     path: '',
