@@ -3,6 +3,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { ReactiveFormsModule } from "@angular/forms";
 import { PanelModule } from 'primeng/panel';
+import { LoginComponent } from './login.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -10,7 +11,7 @@ import { PanelModule } from 'primeng/panel';
         PanelModule,
         ReactiveFormsModule
     ],
-    declarations: [],
+    declarations: [LoginComponent],
     providers: [DatePipe]
 })
 
