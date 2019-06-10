@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app.routing";
 import { AuthenticationService } from "./service/auth.service";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule  } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { PanelModule } from 'primeng/panel';
 import { DropdownModule } from 'primeng/dropdown';
@@ -56,6 +56,7 @@ import { VendorListModule } from './vendor-list/vendor-list.module';
     LoginModule,
     SignupModule,
     VendorListModule,
+    FormsModule 
 
   ],
   providers: [AuthenticationService, UserService, OrderService, AddService, MessageService],

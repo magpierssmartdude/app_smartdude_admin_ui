@@ -1,38 +1,42 @@
-<div class="col-md-12 containerBg">
+<div class="col-md-12 containerBg container">
     <p-toast position="top-right" [style]="{marginTop: '80px'}"></p-toast>
-    <div class="offset-md-6 col-md-6 formContainer ">
+    <div class="offset-md-6 col-md-6 formContainer p-50 ">
         <h4 class="text-center"> SMART DUDE</h4>
-        <p class="text-center">Please complete to create your account</p>
+        <p class="text-center text-secondary p-2">Please complete to create your account</p>
         <form [formGroup]="signUpModel.signupForm">
-            <div class="form-group">
-                <label for="vendorName">Vendor name</label>
-                <input type="text" class="form-control" id="vendorName" formControlName="vendorName">
+            <div class="form-group offset-md-1  col-md-5 d-inline-block">
+                <input type="text" id="vendorName" class="form-control is-invalid" formControlName="vendorName" required>
+                <label class="text-body form-control-placeholder" for="vendorName">Vendor name</label>
             </div>
-            <div class="form-group">
-                <label for="vendorCode">Vendor code</label>
-                <input type="text" class="form-control" id="vendorCode" formControlName="vendorCode">
+            <div class="form-group  col-md-5 d-inline-block">
+                <input type="text" class="form-control" id="vendorCode" formControlName="vendorCode" required>
+                <label class="form-control-placeholder" for="vendorCode">Vendor code</label>
             </div>
-            <div class="form-group">
-                <label for="Organization name">Organization name</label>
-                <input type="text" class="form-control" id="signupEmail" formControlName="OrgName">
+            <div class="form-group offset-md-1 col-md-10">
+                <input type="text" class="form-control" id="signupEmail" formControlName="OrgName" required>
+                <label class="form-control-placeholder" for="Organization name">Organization name</label>
             </div>
-            <div class="form-group">
-                <label for="signupEmail">Email</label>
-                <input type="email" class="form-control" id="signupEmail" ControlName="email">
+            <div class="form-group offset-md-1 col-md-10">
+                <input type="email" class="form-control" id="signupEmail" ControlName="email" required>
+                <label class="form-control-placeholder" for="signupEmail">Email</label>
             </div>
-            <div class="form-group">
-                <label for="phoneNumber">Phone number</label>
-                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+            <div class="form-group offset-md-1 col-md-10">
+                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" required>
+                <label class="form-control-placeholder" for="phoneNumber">Phone number</label>
             </div>
-            <div class="form-group">
-                <label for="OrgType">Organization type</label>
-                <input type="text" class="form-control" id="OrgType" formControlName="OrgType">
+            <div class="form-group offset-md-1 col-md-10">
+                <input type="text" class="form-control" id="OrgType" formControlName="OrgType" required>
+                <label class="form-control-placeholder" for="OrgType">Organization type</label>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">I agree with the Terms and Cnditions</label>
-            </div>
-            <button type="submit" class="btn btn-primary" (click)="signUp()">Sign Up</button>
+
         </form>
+        <div class="offset-md-2">
+            <input (click)="checkBoxValue()" [(ngModel)]="signUpModel.checkBoxValue" type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">I agree with the Terms and Cnditions</label>
+        </div>
+        <div class="text-center p-3">
+            <button type="submit" class="btn btn-secondary btn-lg " (click)="signUp()">Sign Up</button>
+            <a class="d-block p-3"><u>Already have an account? Sign In</u></a>
+        </div>
     </div>
 </div>

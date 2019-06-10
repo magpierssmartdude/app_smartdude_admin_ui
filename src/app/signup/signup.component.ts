@@ -4,6 +4,7 @@ import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { VendorSignUpService } from './services/signup.service';
 import { takeWhile } from 'rxjs/operators';
 import { MessageService } from 'primeng/components/common/messageservice';
+import * as utils from 'lodash';
 
 @Component({
   selector: 'app-signup',
@@ -25,17 +26,18 @@ export class SignupComponent implements OnInit, OnDestroy {
   }
   signupFormInit() {
     this.signUpModel.signupForm = this.formBuilder.group({
-      vendorName: [''],
-      vendorCode: [''],
-      OrgName: [''],
-      email: [''],
-      phoneNumber: [''],
-      OrgType: [''],
+      vendorName: ['', Validators.required],
+      vendorCode: ['', Validators.required],
+      OrgName: ['', Validators.required],
+      email: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
+      OrgType: ['', Validators.required],
     });
   }
   signUp() {
+    this.checkFormFields();
+    if(this.signUpModel.checkboxValue) {
     const signUpDto = this.createSignUpDto(this.signUpModel.signupForm.value);
-    console.log(JSON.stringify(signUpDto));
     this.vendorSignUpService.setSignUpDetaills(signUpDto)
       .subscribe((data => {
         console.log(data);
@@ -44,9 +46,8 @@ export class SignupComponent implements OnInit, OnDestroy {
           severity: 'success', summary: 'Sign Up Successful',
           detail: 'You have signed up successfully.'
         });
-      }))
-  
-  }
+      }));
+  }}
   createSignUpDto(formValue) {
    return {
       vendorcode: formValue.vendorName,
@@ -55,6 +56,13 @@ export class SignupComponent implements OnInit, OnDestroy {
       organizationname: formValue.OrgName,
       phonenumber: formValue.phoneNumber,
       status: 0
-    }
+    };
+  }
+  checkFormFields(){
+    
+  }
+  checkBoxValue() {
+    this.signUpModel.checkboxValue = !this.signUpModel.checkboxValue;
+    console.log(this.signUpModel.checkboxValue)
   }
 }
