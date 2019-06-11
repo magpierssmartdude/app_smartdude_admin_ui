@@ -7,32 +7,52 @@
             <div class="form-group offset-md-1  col-md-5 d-inline-block">
                 <input type="text" id="vendorName" class="form-control is-invalid" formControlName="vendorName" required>
                 <label class="text-body form-control-placeholder" for="vendorName">Vendor name</label>
+                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                    <span class="text-danger small mt-2">Provide a vendor name.</span>
+                </div>
             </div>
             <div class="form-group  col-md-5 d-inline-block">
                 <input type="text" class="form-control" id="vendorCode" formControlName="vendorCode" required>
                 <label class="form-control-placeholder" for="vendorCode">Vendor code</label>
+                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                    <span class="text-danger small mt-2">Provide a vendor code.</span>
+                </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
                 <input type="text" class="form-control" id="signupEmail" formControlName="OrgName" required>
                 <label class="form-control-placeholder" for="Organization name">Organization name</label>
+                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                    <span class="text-danger small mt-2">Provide a Organization name.</span>
+                </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
                 <input type="email" class="form-control" id="signupEmail" ControlName="email" required>
                 <label class="form-control-placeholder" for="signupEmail">Email</label>
+                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                    <span class="text-danger small mt-2">Provide a Organization name.</span>
+                </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
                 <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" required>
                 <label class="form-control-placeholder" for="phoneNumber">Phone number</label>
+                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                    <span class="text-danger small mt-2">Provide a Phone numbe.</span>
+                </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
                 <input type="text" class="form-control" id="OrgType" formControlName="OrgType" required>
                 <label class="form-control-placeholder" for="OrgType">Organization type</label>
+                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                    <span class="text-danger small mt-2">Provide a Organization type.</span>
+                </div>
             </div>
-
         </form>
         <div class="offset-md-2">
             <input (click)="checkBoxValue()" [(ngModel)]="signUpModel.checkBoxValue" type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">I agree with the Terms and Cnditions</label>
+            <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                <span class="text-danger small mt-2">Before you can complete your signUp, you should accept the terms and consitions.</span>
+            </div>
         </div>
         <div class="text-center p-3">
             <button type="submit" class="btn btn-secondary btn-lg " (click)="signUp()">Sign Up</button>

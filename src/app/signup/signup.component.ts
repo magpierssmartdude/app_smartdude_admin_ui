@@ -35,6 +35,7 @@ export class SignupComponent implements OnInit, OnDestroy {
     });
   }
   signUp() {
+    this.signUpModel.signUpClicked = true;
     this.checkFormFields();
     if(this.signUpModel.checkboxValue) {
     const signUpDto = this.createSignUpDto(this.signUpModel.signupForm.value);
