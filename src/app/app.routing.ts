@@ -9,9 +9,10 @@ import { VendorListComponent } from './vendor-list/vendor-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddVendorDetailsComponent } from './add-vendor-details/add-vendor-details.component';
 import { SignupComponent } from './signup/signup.component';
+import { SignUpRequestsComponent } from './sign-up-requests/sign-up-requests.component';
 
 const routes: Routes = [
-  { path: 'login', component:LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'add-service', component: AddServiceComponent },
   { path: 'create-admin', component: CreateAdminComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'vendor-list', component: VendorListComponent },
   { path: 'add-vendor-details', component: AddVendorDetailsComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'SignUpRequests', component: SignUpRequestsComponent },
   { path: '', component: LoginComponent },
   {
     path: '',

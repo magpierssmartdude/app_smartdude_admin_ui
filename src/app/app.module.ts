@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from "./app.routing";
-import { AuthenticationService } from "./service/auth.service";
-import { ReactiveFormsModule, FormsModule  } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import { AppRoutingModule } from './app.routing';
+import { AuthenticationService } from './service/auth.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { PanelModule } from 'primeng/panel';
 import { DropdownModule } from 'primeng/dropdown';
 import { RadioButtonModule } from 'primeng/radiobutton';
@@ -15,9 +15,9 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ChartModule } from 'primeng/chart';
 import { MenuModule } from 'primeng/menu';
 
-import { UserService } from "./service/user.service";
-import { AddService } from "./service/add-service.service";
-import { OrderService } from "./service/order.service";
+import { UserService } from './service/user.service';
+import { AddService } from './service/add-service.service';
+import { OrderService } from './service/order.service';
 import { MessageService } from 'primeng/components/common/messageservice';
 
 import { AddServiceModule } from './add-service/add-service.module';
@@ -29,6 +29,7 @@ import { ListUserModule } from './list-user/list-user.module';
 import { LoginModule } from './login/login.module';
 import { SignupModule } from './signup/signup.module';
 import { VendorListModule } from './vendor-list/vendor-list.module';
+import { SignUpRequestsModule } from './sign-up-requests/sign-up-requests.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -37,6 +38,7 @@ import { VendorListModule } from './vendor-list/vendor-list.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     SidebarModule,
     ChartModule,
@@ -56,7 +58,7 @@ import { VendorListModule } from './vendor-list/vendor-list.module';
     LoginModule,
     SignupModule,
     VendorListModule,
-    FormsModule 
+    SignUpRequestsModule
 
   ],
   providers: [AuthenticationService, UserService, OrderService, AddService, MessageService],
