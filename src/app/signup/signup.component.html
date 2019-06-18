@@ -1,48 +1,60 @@
 <div class="col-md-12 containerBg container">
     <p-toast position="top-right" [style]="{marginTop: '80px'}"></p-toast>
-    <div class="offset-md-6 col-md-6 formContainer p-50 ">
+    <div class="offset-md-4 col-md-8 offset-lg-7 col-lg-5 offset-xl-8 col-xl-4 col-sm-8 formContainer p-50">
         <h4 class="text-center"> SMART DUDE</h4>
         <p class="text-center text-secondary p-2">Please complete to create your account</p>
         <form [formGroup]="signUpModel.signupForm">
             <div class="form-group offset-md-1  col-md-5 d-inline-block">
-                <input type="text" id="vendorName" class="form-control is-invalid" formControlName="vendorName" required>
+                <input type="text" id="vendorName" class="form-control is-invalid" formControlName="vendorName" (blur)="validateVendorName($event['target']['value'],'vendorName')" required [ngClass]="{'setError':signUpModel.signupForm.get('vendorName').hasError('fieldMandatory') &&
+                     signUpModel.signupForm.controls.vendorName.touched}">
                 <label class="text-body form-control-placeholder" for="vendorName">Vendor name</label>
-                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                <div [ngClass]="{'hideDiv':!signUpModel.signupForm.get('vendorName').hasError('fieldMandatory')||
+                    !signUpModel.signupForm.controls.vendorName.touched }">
                     <span class="text-danger small mt-2">Provide a vendor name.</span>
                 </div>
             </div>
             <div class="form-group  col-md-5 d-inline-block">
-                <input type="text" class="form-control" id="vendorCode" formControlName="vendorCode" required>
+                <input type="text" class="form-control" id="vendorCode" formControlName="vendorCode" (blur)="validateVendorName($event['target']['value'],'vendorCode')" required [ngClass]="{'setError':signUpModel.signupForm.get('vendorCode').hasError('fieldMandatory') &&
+                     signUpModel.signupForm.controls.vendorCode.touched}">
                 <label class="form-control-placeholder" for="vendorCode">Vendor code</label>
-                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                <div [ngClass]="{'hideDiv':!signUpModel.signupForm.get('vendorCode').hasError('fieldMandatory') ||
+                     !signUpModel.signupForm.controls.vendorCode.touched }">
                     <span class="text-danger small mt-2">Provide a vendor code.</span>
                 </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
-                <input type="text" class="form-control" id="signupEmail" formControlName="OrgName" required>
-                <label class="form-control-placeholder" for="Organization name">Organization name</label>
-                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                <input type="text" class="form-control" id="OrgName" formControlName="OrgName" (blur)="validateVendorName($event['target']['value'],'OrgName')" [ngClass]="{'setError':signUpModel.signupForm.get('OrgName').hasError('fieldMandatory') && 
+                    signUpModel.signupForm.controls.OrgName.touched}" required>
+                <label class="form-control-placeholder" for="OrgName">Organization name</label>
+                <div [ngClass]="{'hideDiv':!signUpModel.signupForm.get('OrgName').hasError('fieldMandatory')||
+                     !signUpModel.signupForm.controls.OrgName.touched}">
                     <span class="text-danger small mt-2">Provide a Organization name.</span>
                 </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
-                <input type="email" class="form-control" id="signupEmail" ControlName="email" required>
-                <label class="form-control-placeholder" for="signupEmail">Email</label>
-                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
-                    <span class="text-danger small mt-2">Provide a Organization name.</span>
+                <input type="text" class="form-control" id="email" formControlName="email" (blur)="validateVendorName($event['target']['value'],'email')" [ngClass]="{'setError':signUpModel.signupForm.get('email').hasError('fieldMandatory') &&
+                     signUpModel.signupForm.controls.email.touched}" required>
+                <label class="form-control-placeholder" for="email">Email</label>
+                <div [ngClass]="{'hideDiv': !signUpModel.signupForm.controls.email.touched}">
+                    <span *ngIf="signUpModel.signupForm.get('email').hasError('fieldMandatory')" class="text-danger small mt-2">Please provide an email</span>
+                    <span *ngIf="signUpModel.signupForm.get('email').hasError('inValidMail')" class="text-danger small mt-2">Please provide a valid email</span>
                 </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
-                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" required>
+                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" (blur)="validateVendorName($event['target']['value'],'phoneNumber')" required [ngClass]="{'setError':signUpModel.signupForm.get('phoneNumber').hasError('fieldMandatory') &&
+                     signUpModel.signupForm.controls.phoneNumber.touched}">
                 <label class="form-control-placeholder" for="phoneNumber">Phone number</label>
-                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
-                    <span class="text-danger small mt-2">Provide a Phone numbe.</span>
+                <div [ngClass]="{'hideDiv':!signUpModel.signupForm.get('phoneNumber').hasError('fieldMandatory')||
+                     !signUpModel.signupForm.controls.phoneNumber.touched}">
+                    <span class="text-danger small mt-2">Provide a Phone number.</span>
                 </div>
             </div>
             <div class="form-group offset-md-1 col-md-10">
-                <input type="text" class="form-control" id="OrgType" formControlName="OrgType" required>
+                <input type="text" class="form-control" id="OrgType" formControlName="OrgType" (blur)="validateVendorName($event['target']['value'],'OrgType')" required [ngClass]="{'setError':signUpModel.signupForm.get('OrgType').hasError('fieldMandatory') && 
+                    signUpModel.signupForm.controls.OrgType.touched}">
                 <label class="form-control-placeholder" for="OrgType">Organization type</label>
-                <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
+                <div [ngClass]="{'hideDiv':!signUpModel.signupForm.get('OrgType').hasError('fieldMandatory')||
+                     !signUpModel.signupForm.controls.OrgType.touched}">
                     <span class="text-danger small mt-2">Provide a Organization type.</span>
                 </div>
             </div>
@@ -51,7 +63,8 @@
             <input (click)="checkBoxValue()" [(ngModel)]="signUpModel.checkBoxValue" type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">I agree with the Terms and Cnditions</label>
             <div *ngIf="!signUpModel.checkBoxValue && signUpModel.signUpClicked ">
-                <span class="text-danger small mt-2">Before you can complete your signUp, you should accept the terms and consitions.</span>
+                <span class="text-danger small mt-2">Before you can complete your signUp, you should accept the terms
+                    and consitions.</span>
             </div>
         </div>
         <div class="text-center p-3">

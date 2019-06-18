@@ -39,12 +39,17 @@ select.form-control:focus {
 }
 
 .setError {
-    border-color: #cc2d24;
-    background-color: #faeae9;
+    border-color: #cc2d24 !important;
+}
+
+.hideDiv {
+    visibility: hidden;
 }
 
 .containerBg {
     background-image: url(../../assets/bg/signup.png);
     background-repeat: no-repeat;
-    background-size: 50% 100%;
+    background-size: cover;
+    width: 100%;
+    height: auto;
 }

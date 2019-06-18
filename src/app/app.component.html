@@ -1,12 +1,12 @@
 <div class="headerContainer col-md-12 row">
-    <div class="col-md-2">
+    <div class="col-md-4">
         <span><img src="../assets/logo_smart.png" width="30" /></span>
         <h4>SMART DUDE</h4>
     </div>
-    <div class="col-md-9 mTop">
+    <!-- <div class="col-md-9 mTop">
         <button type="text" (click)="toggleMenu($event)" class="menuBtn" pButton icon="fa fa-list"></button>
-    </div>
-    <div class="col-md-1 logout">
+    </div> -->
+    <div class=" offset-md-7 col-md-1 logout">
         <img alt="admin" class="login-img" src="../assets/user.jpg" (click)="menuToggle($event)">
         <p-menu #menu [popup]="showMenu" [model]="items"></p-menu>
     </div>
@@ -14,16 +14,15 @@
 </div>
 <div class="mainContainer">
 
-    <div class="col-md-12 row noPadding">
-        <div class="col-md-2">
+    <div class="row noPadding">
+        <!-- <div class="col-md-2">
             <p-sidebar [(visible)]="display" [modal]=false styleClass="sidebarContainer" [style]="{width:'15em'}">
                 <div class="col-md-12 noPadding menuContainer">
                     <p-megaMenu [model]="menuItems"></p-megaMenu>
                 </div>
             </p-sidebar>
-
-        </div>
-        <div class="col-md-10">
+        </div> -->
+        <div class="col-md-12">
             <router-outlet></router-outlet>
         </div>
     </div>
