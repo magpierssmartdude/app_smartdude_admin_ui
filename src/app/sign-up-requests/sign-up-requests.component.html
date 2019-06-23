@@ -2,8 +2,7 @@
   <div class="card-columns">
     <div *ngFor="let card of cardGrid" class="card">
       <div>
-        <i class="pi pi-pencil float-right p-2"></i>
-
+        <i class="fa fa-pencil float-right p-2"></i>
       </div>
       <div class="card-body p-2 clearfix">
         <div class="w-25 float-left align-middle">
@@ -16,10 +15,14 @@
         </div>
       </div>
       <div>
-          <div class="d-inline-block"> 
-            <i class="pi pi-list float-left p-2">
-            </i>Reports</div>
-          <div class="d-inline-block"><i class="pi pi-plus-circle p-2"></i>Approve</div>
+          <button class="w-75 pure-button  bg-transparent iconButton">
+              <i class="fa fa-bars green"></i>
+              Reports
+          </button>
+          <button class="pure-button bg-transparent iconButton">
+              <i class="fa fa-plus-circle"></i>
+              Approve
+          </button>
       </div>
     </div>
   </div>
