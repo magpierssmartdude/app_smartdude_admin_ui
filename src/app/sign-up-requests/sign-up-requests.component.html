@@ -1,3 +1,26 @@
-<p>
-  sign-up-requests works!
-</p>
+<div class="container">
+  <div class="card-columns">
+    <div *ngFor="let card of cardGrid" class="card">
+      <div>
+        <i class="pi pi-pencil float-right p-2"></i>
+
+      </div>
+      <div class="card-body p-2 clearfix">
+        <div class="w-25 float-left align-middle">
+          <img class="rounded-circle " alt="admin" src="../assets/user.jpg" (click)="menuToggle($event)">
+        </div>
+        <div class="w-50 p-2 float-left ">
+          <p class="card-text m-0 ">{{card['name']}}<a href="#" class="card-link">why</a>.</p>
+          <p class="m-0">line 2</p>
+          <p class="m-0">line 3</p>
+        </div>
+      </div>
+      <div>
+          <div class="d-inline-block"> 
+            <i class="pi pi-list float-left p-2">
+            </i>Reports</div>
+          <div class="d-inline-block"><i class="pi pi-plus-circle p-2"></i>Approve</div>
+      </div>
+    </div>
+  </div>
+</div>

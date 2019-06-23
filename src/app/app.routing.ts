@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'vendor-list', component: VendorListComponent },
   { path: 'add-vendor-details', component: AddVendorDetailsComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'SignUpRequests', component: SignUpRequestsComponent },
+  { path: 'signup-requests', component: SignUpRequestsComponent },
   { path: '', component: LoginComponent },
   {
     path: '',

@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up-requests.component.css']
 })
 export class SignUpRequestsComponent implements OnInit {
-
+  cardGrid;
   constructor() { }
 
   ngOnInit() {
+    this.cardGrid = [{ name: 'name' }, { name: 'name' }, { name: 'name' }, { name: 'name' }, { name: 'name' }, { name: 'name' }];
   }
 
 }
