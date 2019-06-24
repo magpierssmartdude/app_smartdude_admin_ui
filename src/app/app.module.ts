@@ -30,6 +30,8 @@ import { LoginModule } from './login/login.module';
 import { SignupModule } from './signup/signup.module';
 import { VendorListModule } from './vendor-list/vendor-list.module';
 import { SignUpRequestsModule } from './sign-up-requests/sign-up-requests.module';
+import { AddQueueManagerModule } from './add-queue-manager/add-queue-manager.module';
+import { AddLocationModule } from './add-location/add-location.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -58,8 +60,9 @@ import { SignUpRequestsModule } from './sign-up-requests/sign-up-requests.module
     LoginModule,
     SignupModule,
     VendorListModule,
-    SignUpRequestsModule
-
+    SignUpRequestsModule,
+    AddQueueManagerModule,
+    AddLocationModule
   ],
   providers: [AuthenticationService, UserService, OrderService, AddService, MessageService],
   bootstrap: [AppComponent]

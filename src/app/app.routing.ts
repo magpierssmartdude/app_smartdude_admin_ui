@@ -10,6 +10,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddVendorDetailsComponent } from './add-vendor-details/add-vendor-details.component';
 import { SignupComponent } from './signup/signup.component';
 import { SignUpRequestsComponent } from './sign-up-requests/sign-up-requests.component';
+import { AddQueueManagerComponent } from './add-queue-manager/add-queue-manager.component';
+import { AddLocationComponent } from './add-location/add-location.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -23,6 +26,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'signup-requests', component: SignUpRequestsComponent },
   { path: '', component: LoginComponent },
+  { path: 'add-queue-manager', component: AddQueueManagerComponent },
+  { path: 'add-location', component: AddLocationComponent },
   {
     path: '',
     redirectTo: 'login',

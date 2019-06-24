@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">.col-6</div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <div class="">
+      <div *ngFor="let card of cardGrid" class="card mb-3" > 
+        <div>
+          <i class="fa fa-pencil float-right p-2"></i>
+        </div>
+        <div class="card-body p-2 clearfix">
+          <div class="w-25 float-left align-middle">
+            <img class="rounded-circle " alt="admin" src="../../assets/user.jpg" (click)="menuToggle($event)">
+          </div>
+          <div class="w-50 p-2 float-left ">
+            <p class="card-text m-0 ">{{card['name']}}<a href="#" class="card-link">why</a>.</p>
+            <p class="m-0">line 2</p>
+            <p class="m-0">line 3</p>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent pl-0 pr-0">
+          <button class="w-50 pure-button  bg-transparent iconButton">
+            <i class="fa fa-bars iconColor pr-1"></i>
+            Reports
+          </button>
+          <button class="pure-button bg-transparent iconButton">
+            <i class="fa fa-plus-circle iconColor pr-1"></i>
+            Approve
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
